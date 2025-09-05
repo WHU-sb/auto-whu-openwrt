@@ -23,7 +23,7 @@ wget https://github.com/WHU-sb/auto-whu-openwrt/archive/refs/heads/master.zip -O
 ```bash
 cd /
 # 上一步为进入根目录，如果你已经在根目录了，则不需要
-unzip /tmp/auto-whu-master.zip
+unzip -o /tmp/auto-whu-master.zip
 # 设置脚本执行权限
 chmod +x /auto-whu-openwrt-master/usr/sbin/auto-whu.sh
 chmod +x /auto-whu-openwrt-master/etc/init.d/auto-whu
