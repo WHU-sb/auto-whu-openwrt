@@ -25,12 +25,14 @@ cd /
 # 上一步为进入根目录，如果你已经在根目录了，则不需要
 unzip /tmp/auto-whu-master.zip
 # 设置脚本执行权限
-chmod +x /auto-whu-master/auto-whu.sh
-chmod +x /auto-whu-master/etc/init.d/auto-whu
-# 移动文件到正确位置
-cp -r /auto-whu-master/* /
+chmod +x /auto-whu-openwrt-master/usr/sbin/auto-whu.sh
+chmod +x /auto-whu-openwrt-master/etc/init.d/auto-whu
+# 移动文件到正确位置（排除README.MD）
+cp /auto-whu-openwrt-master/etc/auto-whu.conf /etc/
+cp /auto-whu-openwrt-master/etc/init.d/auto-whu /etc/init.d/
+cp /auto-whu-openwrt-master/usr/sbin/auto-whu.sh /usr/sbin/
 # 清理临时文件
-rm -rf /auto-whu-master /tmp/auto-whu-master.zip
+rm -rf /auto-whu-openwrt-master /tmp/auto-whu-master.zip
 ```
 
 5、修改`/etc/auto-whu.conf`，将其中的`username`和`pwd`修改为你的账号和密码
